@@ -55,18 +55,18 @@
             this.Title.AutoSize = true;
             this.Title.Location = new System.Drawing.Point(231, 109);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(46, 17);
+            this.Title.Size = new System.Drawing.Size(39, 17);
             this.Title.TabIndex = 2;
-            this.Title.Text = "label1";
+            this.Title.Text = "Tittle";
             // 
             // Author
             // 
             this.Author.AutoSize = true;
             this.Author.Location = new System.Drawing.Point(231, 174);
             this.Author.Name = "Author";
-            this.Author.Size = new System.Drawing.Size(46, 17);
+            this.Author.Size = new System.Drawing.Size(50, 17);
             this.Author.TabIndex = 3;
-            this.Author.Text = "label2";
+            this.Author.Text = "Author";
             // 
             // btnAddBook
             // 

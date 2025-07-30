@@ -19,12 +19,25 @@ namespace Book_Library_Manager
 
         private void BtnAddBook_Click(object sender, EventArgs e)
         {
-            string title = txtTitle.Text;
-            string author = txtAuthor.Text;
-            lstBooks.Items.Add(title + " by " + author);
+            string title = txtTitle.Text.Trim();
+            string author = txtAuthor.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(title))
+            {
+                MessageBox.Show("Book title cannot be empty.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(author) || author.Any(char.IsDigit))
+            {
+                MessageBox.Show("Author name must not contain numbers.");
+                return;
+            }
+            lstBooks.Items.Add($"{title} by {author}");
             txtTitle.Clear();
             txtAuthor.Clear();
-           
+
+
 
         }
     }
