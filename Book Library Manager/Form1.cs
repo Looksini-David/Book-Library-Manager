@@ -40,5 +40,24 @@ namespace Book_Library_Manager
 
 
         }
+
+        private void BtnClear_Click(object sender, EventArgs e)
+        {
+            txtAuthor.Clear();
+            txtTitle.Clear();
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            if (lstBooks.SelectedIndex != -1)
+            {
+                lstBooks.Items.RemoveAt(lstBooks.SelectedIndex);
+            }
+            else
+            {
+                MessageBox.Show("Please select a book to delete.");
+            }
+
+        }
     }
 }
